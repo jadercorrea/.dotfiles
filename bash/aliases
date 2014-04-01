@@ -45,11 +45,6 @@ alias capst='echo "Running be cap staging deploy:migrations" && be cap staging d
 alias capstaging='capst'
 alias capprod='echo "Running be cap production deploy:migrations" && be cap production deploy:migrations'
 
-# Ssh
-
-alias deploy='ssh deploy@107.170.111.183'
-alias ubuntu-web='ssh azureuser@ubuntu-web.cloudapp.net'
-
 # Git
 
 alias g='git status'

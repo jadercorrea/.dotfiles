@@ -45,6 +45,11 @@ alias capst='echo "Running be cap staging deploy:migrations" && be cap staging d
 alias capstaging='capst'
 alias capprod='echo "Running be cap production deploy:migrations" && be cap production deploy:migrations'
 
+# Ssh
+
+alias deploy='ssh deploy@107.170.111.183'
+alias ubuntu-web='ssh azureuser@ubuntu-web.cloudapp.net'
+
 # Git
 
 alias g='git status'
@@ -56,9 +61,9 @@ alias gl='git log'
 alias gdm='git diff master'
 
 	# Commit pending changes and quote all args as message
-	function gc(){
-		git commit -v -m "$*"
-	}
+  function gc(){ echo "Do you mean gco?"; }
+  function gco(){ git commit -v -m "$*"; }
+  function gch(){ git checkout $*; }
 
   # rmr = Rebase Master Rebase
 	function rmr(){

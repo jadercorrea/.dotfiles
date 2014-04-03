@@ -15,9 +15,11 @@ fi
 
 Edit gitconfig file at `~/.dotfiles/git/` with your name and email.
 
-Add the ir_black theme in your `~/.vim/colors/` directory.
+Copy the ir_black theme in your vim directory `cp ~/.dotfiles/themes/ir_black.vim ~/.vim/colors/ir_black.vim`.
 
-Install ctags package: `sudo apt-get install exuberant-ctags`.
+Then, clone Vundle : `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+
+Install ctags package `sudo apt-get install exuberant-ctags` to make vim better and tmux `sudo apt-get install tmux` for a better life.
 
 Now run the loading commands:
 `$ source ~/.bashrc` (or `$ source ~/.bash_profile` if you're in a Mac, punk).

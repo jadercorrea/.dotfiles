@@ -33,6 +33,9 @@ alias count_files='find ./ -maxdepth 1 -type d | while read -r dir; do printf "%
 alias tu='top -o cpu'
 alias tm='top -o cpu'
 
+# Apache
+alias apache='sudo /etc/init.d/apache2'
+
 # Rails helpers
 #
 # Redirects port 80 on a Mac to 3000, allowing to run the server without root

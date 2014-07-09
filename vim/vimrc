@@ -182,6 +182,8 @@ let g:ctrlp_user_command = 'find %s -type f'
   " Updates CTags
   map <F5> :exec "!ctags -R --exclude=.git --exclude=vendor/bundle"<CR>
 
+  nmap <leader>b :so $MYVIMRC<CR>
+
   " Resizing windows
   nnoremap <C-h> :vertical resize +5<cr>
   nnoremap <C-l> :vertical resize -5<cr>
@@ -207,9 +209,10 @@ let g:ctrlp_user_command = 'find %s -type f'
     " Keeps current file in on side, and its test file in the other
     " (depends on Rails.vim)
     map <leader>A :on<CR>\|:vsplit<CR>\|<c-w>l\|:A<CR>
+
     " adds <%= %> in the current line
-    inoremap <leader>e <%=  %><ESC>==lllli
-    nnoremap <leader>e i<%=  %><ESC>==lllli
+    inoremap <leader>p <%=  %><ESC>==lllli
+    nnoremap <leader>p <%=  %><ESC>==lllli
 
     " :A is from rails.vim plugin
     nnoremap <Leader>a :A<CR>

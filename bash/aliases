@@ -1,4 +1,4 @@
-function update_bash(){
+ update_bash(){
 	ln -nfs ~/.dotfiles/git/gitconfig ~/.gitconfig
 	ln -nfs ~/.dotfiles/git/githelpers ~/.githelpers
 	ln -nfs ~/.dotfiles/vim/vimrc ~/.vimrc
@@ -122,6 +122,22 @@ function spc(){ echo 'Running all tests in spec/controllers/' && time bundle exe
 function spm(){ echo 'Running all tests in spec/models/' && time bundle exec rspec spec/models/ $*; }
 function spl(){ echo 'Running all tests in spec/lib/' && time bundle exec rspec spec/lib/ $*; }
 
+function t(){
+  SPEC_PATH='spec/'
+  if [ ! -z "$*" ]; then
+    SPEC_PATH="$*"
+  fi
+  echo "Running all tests in $SPEC_PATH" && time bundle exec rspec $SPEC_PATH
+}
+function tf(){
+  SPEC_PATH='spec/'
+  if [ ! -z "$*" ]; then
+    SPEC_PATH="$*"
+  fi
+  echo "Running all tests in $SPEC_PATH and failing-fast" && time bundle exec rspec $SPEC_PATH --fail-fast 2> >(grep -v CoreText 1>&2);
+}
+function tsay(){ echo 'Running all tests in spec/ and then shouting at you' && time bundle exec rspec spec/ $* && echo 'SPECS ARE DONE! GET BACK HERE!'|espeak; }
+
 # checks the complexity of a file in HEAD~1
 function floggg(){
   echo "Before:" && git show HEAD:$* | cat > ~/.flog_tmp && flog ~/.flog_tmp | grep "flog total" && rm ~/.flog_tmp;
@@ -156,6 +172,9 @@ function floggg(){
 # Tmux
 #
 # execute_in_all_panes "echo OH HAI"
+function tmuxa(){ tmux attach -t $*; }
+function tmuxn(){ tmux new-session -s $*; }
+function tmuxk(){ tmux kill-session -t $*; }
 
 # General commands
 function grepp(){
@@ -168,4 +187,12 @@ function findd(){
 
 function superkill(){
   kill -9 `ps aux | grep $* | awk '{print $2}'`
+}
+
+function ,f() {
+  vim $(git ls-files|selecta)
+}
+
+function ffiles() {
+  find . -name \* -print | selecta
 }

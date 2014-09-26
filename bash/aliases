@@ -36,6 +36,8 @@ alias tm='top -o cpu'
 
 # Apache
 alias apache='sudo /etc/init.d/apache2'
+# Postgres
+alias pg='pg_ctl -D /usr/local/var/postgres -l ~/.pg.log start'
 
 # Rails helpers
 #

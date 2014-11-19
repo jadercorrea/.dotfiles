@@ -40,6 +40,8 @@ alias apache='sudo /etc/init.d/apache2'
 alias pg='pg_ctl -D /usr/local/var/postgres -l ~/.pg.log start'
 # MongoDb
 alias mdb='sudo mongod --fork --logpath /var/log/mongod.log'
+# MySql
+alias mys='mysql.server start'
 
 # Rails helpers
 #

@@ -38,6 +38,8 @@ alias tm='top -o cpu'
 alias apache='sudo /etc/init.d/apache2'
 # Postgres
 alias pg='pg_ctl -D /usr/local/var/postgres -l ~/.pg.log start'
+# MongoDb
+alias mdb='sudo mongod --fork --logpath /var/log/mongod.log'
 
 # Rails helpers
 #

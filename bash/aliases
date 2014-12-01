@@ -202,3 +202,7 @@ function ,f() {
 function ffiles() {
   find . -name \* -print | selecta
 }
+
+function zooppa_db() {
+  gunzip < $* | mysql -u root -p -h localhost zooppa_development
+}

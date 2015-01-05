@@ -98,6 +98,15 @@ alias gdm='git diff master'
 		git push origin $CURRENT_BRANCH
 	}
 
+	function gdel(){
+		BRANCH=$*
+
+		echo Deleting from origin $BRANCH...
+		git push origin :$BRANCH
+    echo Deleting local $BRANCH
+    git branch -D $BRANCH
+	}
+
 	function gpr(){
 		# Defines the current git branch
 		export CURRENT_BRANCH=`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\\\\\\1\\/`

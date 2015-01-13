@@ -213,5 +213,9 @@ function ffiles() {
 }
 
 function zooppa_db() {
+  echo Unpacking and restoring database...
   gunzip < $* | mysql -u root -p -h localhost zooppa_development
+  echo Deleting files...
+  find . -type f -name "Zooppa*" -delete
+  echo DB Restore complete
 }

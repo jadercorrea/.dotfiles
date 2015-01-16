@@ -212,10 +212,36 @@ function ffiles() {
   find . -name \* -print | selecta
 }
 
-function zooppa_db() {
-  echo Unpacking and restoring database...
-  gunzip < $* | mysql -u root -p -h localhost zooppa_development
-  echo Deleting files...
-  find . -type f -name "Zooppa*" -delete
-  echo DB Restore complete
+function zooppa_db_restore() {
+  if ((!$#)); then
+    echo Getting most recent backup
+    S3_URI=`s3cmd ls s3://dbbackup.zooppa.com/ZooppaProduction.ZooppaRails4/ | tail -1 | awk '{print $4}'`
+
+    echo Downloading:
+    s3cmd get $S3_URI $(pwd)"/temp.sql.gz"
+    BACKUP_FILE="temp.sql.gz"
+  else
+    BACKUP_FILE=$*
+  fi
+
+  echo Unpacking and restoring on zooppa_development database
+
+  gunzip < $BACKUP_FILE | mysql -u root -p -h localhost zooppa_development
+
+  echo Deleting backup file
+  rm $BACKUP_FILE
+  echo Database restore completed
+}
+
+function zooppa_up() {
+  zooppa_db_restore
+  echo Rebasing projects
+  cd ~/www/zooppa
+  for i in $(ls -d */); do
+    echo updating ${i%%/} project
+    cd ${i%%/}
+    git up
+    cd ..
+  done
+  echo Rebasing complete
 }

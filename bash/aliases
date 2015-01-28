@@ -191,6 +191,9 @@ function tmuxa(){ tmux attach -t $*; }
 function tmuxn(){ tmux new-session -s $*; }
 function tmuxk(){ tmux kill-session -t $*; }
 
+# Sublime
+alias sub='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+
 # General commands
 function grepp(){
   grep -Rni --exclude=".//db/data*" --exclude=".//tmp*" --exclude=".//vendor*" --exclude=".//coverage*" --exclude=".//log*" --exclude=".//tag*" --exclude=".//spec*/vcr*" --exclude=".//spec*/cassett*" --exclude=".//public/*.js*" --exclude=".//.*" --exclude="./db/data*" --exclude="./tmp*" --exclude="./vendor*" --exclude="./coverage*" --exclude="./log*" --exclude="./tag*" --exclude="./spec*/cassett*" --exclude="./public/*.js*" --exclude="./.*" "$*" ./

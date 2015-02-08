@@ -1,16 +1,12 @@
 Bundle 'gmarik/vundle'
-
 Bundle 'vim-scripts/CSApprox'
 Bundle 'vim-scripts/EasyGrep'
 Bundle 'kurko/autocoder.vim'
 Bundle 'kurko/smartest.vim'
 Bundle 'thisivan/vim-bufexplorer'
-
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'tsaleh/vim-matchit'
 " To use CTags
 Bundle 'vim-scripts/taglist.vim'
-
 Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'tpope/vim-cucumber.git'
@@ -46,5 +42,5 @@ Bundle 'chrismetcalf/vim-yankring.git'
 Bundle 'tpope/vim-vividchalk.git'
 Bundle 'mattn/emmet-vim.git'
 Bundle 'rking/ag.vim'
-
 Bundle 'wting/rust.vim'
+Bundle 'elixir-lang/vim-elixir'

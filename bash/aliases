@@ -34,6 +34,9 @@ alias count_files='find ./ -maxdepth 1 -type d | while read -r dir; do printf "%
 alias tu='top -o cpu'
 alias tm='top -o cpu'
 
+# Misc
+alias irc='/Applications/MacIrssi.app/Contents/MacOS/MacIrssi'
+
 # Apache
 alias apache='sudo /etc/init.d/apache2'
 # Postgres

@@ -251,3 +251,18 @@ function zooppa_up() {
   done
   echo Rebasing complete
 }
+
+function contribute() {
+  if (($#)); then
+    cd ~/www/open_source
+    git clone $*
+    [[ $* =~ [^\/][\w]+(?=\.git) ]] && cd $BASH_REMATCH
+    echo Bundling
+    bundle install
+    echo Done!
+    echo ${BASH_REMATCH[1]}
+echo $BASH_REMATCH
+  else
+    echo No repo given to clone
+  fi
+}

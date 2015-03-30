@@ -253,6 +253,12 @@ function zooppa_up() {
   echo Rebasing complete
 }
 
+function mtl_db_restore {
+  cd ~/www/mytennislessons
+  rake db:drop
+  heroku pg:pull HEROKU_POSTGRESQL_YELLOW mytennislessons_development --app mtl-staging
+}
+
 function contribute() {
   if (($#)); then
     cd ~/www/open_source

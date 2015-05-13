@@ -278,7 +278,7 @@ command! CtrlPVimPath call SetCtrlPPathTheSameAsVim()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   noremap <cr> <ESC>:w<ESC>\|:call RunTestFile()<cr>
   map <leader>t :call RunTestFile()<cr>
-  map <leader>r :call RunNearestTest()<cr>
+  map <leader>r :RuboCop<cr>
   map <leader>bt <ESC>:w<CR>\|:!bundle exec rspec --color --no-drb %<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

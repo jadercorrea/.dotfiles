@@ -24,6 +24,9 @@ fi
 
 source ~/.dotfiles/bash/git-completion.bash
 
+# Projetcs
+alias mtl='tmux | teamocil mtl'
+
 # System
 alias ls='ls -G'
 alias ..='cd ..'

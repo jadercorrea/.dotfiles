@@ -15,7 +15,9 @@ windows:
     root: ~/www/mtl
     layout: even-horizontal
     panes:
-      - be rails s
+      - commands:
+        - pg
+        - be rails s
   - name: console
     root: ~/www/mtl
     layout: even-horizontal

@@ -37,6 +37,6 @@ windows:
     root: ~/www/mtl
     layout: main-vertical
     panes:
-      - red
       - be sidekiq -q mailers -q default
+      - red
       - zst

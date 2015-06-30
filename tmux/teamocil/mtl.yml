@@ -1,40 +1,40 @@
 windows:
   - name: vim
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - vim
   - name: up guard
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - commands:
         - git up
-        - bundle exec guard
+        - be guard
   - name: server
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - commands:
         - pg
         - be rails s
   - name: console
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - rails c
   - name: security
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - brakeman -q
   - name: metrics
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: even-horizontal
     panes:
       - rubocop
   - name: jobs
-    root: ~/www/mtl
+    root: ~/www/servicient/mtl
     layout: main-vertical
     panes:
       - be sidekiq -q mailers -q default

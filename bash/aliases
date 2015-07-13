@@ -123,6 +123,21 @@ alias gdm='git diff master'
     git branch -D $BRANCH
 	}
 
+	function glocaldel(){
+    if ((!$#)); then
+      echo No option given. Add -d or -D to the command
+      return 0
+    fi
+
+    git checkout master
+		BRANCHES=`comm -23 <(git branch -l | grep -v master | sed 's/^ *//g') <(git branch -r | grep origin | sed 's/.*\///')`
+
+    for branch in $BRANCHES; do
+      echo Removing branch ${branch%%}
+      `git branch $1 ${branch%%} --quiet`
+    done
+	}
+
 	function gpr(){
 		# Defines the current git branch
 		export CURRENT_BRANCH=`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\\\\\\1\\/`

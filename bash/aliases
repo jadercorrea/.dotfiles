@@ -26,6 +26,7 @@ source ~/.dotfiles/bash/git-completion.bash
 
 # Projetcs
 alias mtl='tmux | teamocil mtl'
+alias adhoc='tmux | teamocil adhoc'
 
 # System
 alias ls='ls -G'
@@ -108,9 +109,14 @@ alias gdm='git diff master'
 		git push origin $CURRENT_BRANCH
 	}
 
-	function gdel(){
-		BRANCH=$*
-
+  # Removes branch local and remotely
+	function gdestroy(){
+    if (($#)); then
+      BRANCH=$*
+    else
+      BRANCH=`git rev-parse --abbrev-ref HEAD`
+      git checkout master
+    fi
 		echo Deleting from origin $BRANCH...
 		git push origin :$BRANCH
     echo Deleting local $BRANCH
@@ -274,7 +280,7 @@ function contribute() {
     bundle install
     echo Done!
     echo ${BASH_REMATCH[1]}
-echo $BASH_REMATCH
+    echo $BASH_REMATCH
   else
     echo No repo given to clone
   fi

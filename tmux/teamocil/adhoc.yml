@@ -1,0 +1,41 @@
+windows:
+  - name: vim
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: up test
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - commands:
+        - git up
+        - t
+  - name: server
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - commands:
+        - pg
+        - be rails s
+  - name: console
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - rails c
+  - name: security
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - brakeman -q
+  - name: metrics
+    root: ~/www/projects/adhoc
+    layout: even-horizontal
+    panes:
+      - rubocop
+  - name: jobs
+    root: ~/www/projects/adhoc
+    layout: main-vertical
+    panes:
+      - red
+      - zst

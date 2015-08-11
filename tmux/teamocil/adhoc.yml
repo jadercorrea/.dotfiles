@@ -37,5 +37,6 @@ windows:
     root: ~/www/projects/adhoc
     layout: main-vertical
     panes:
+      - be sidekiq -q default
       - red
       - zst

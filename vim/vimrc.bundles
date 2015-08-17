@@ -2,7 +2,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/CSApprox'
 Bundle 'vim-scripts/EasyGrep'
 Bundle 'kurko/autocoder.vim'
-Bundle 'kurko/smartest.vim'
+Bundle 'jadercorrea/smartest.vim'
 Bundle 'thisivan/vim-bufexplorer'
 Bundle 'bkad/CamelCaseMotion'
 " To use CTags

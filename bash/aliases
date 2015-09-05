@@ -54,6 +54,11 @@ alias mys='mysql.server start'
 #Redis
 alias red='redis-server &'
 
+# cURL
+alias api-get="curl -H 'Content-Type: application/json' "
+alias api-post="curl -i -H 'Content-Type: application/json' -X POST -d "
+alias api-delete="curl -i -H 'Content-Type: application/json' -X DELETE "
+
 # Rails helpers
 #
 # Redirects port 80 on a Mac to 3000, allowing to run the server without root

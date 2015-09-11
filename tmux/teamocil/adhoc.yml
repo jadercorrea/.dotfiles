@@ -10,6 +10,7 @@ windows:
     panes:
       - commands:
         - git up
+        - be rake db:migrate RAILS_ENV=test
         - t
   - name: server
     root: ~/www/projects/adhoc
@@ -17,6 +18,7 @@ windows:
     panes:
       - commands:
         - pg
+        - be rake db:migrate
         - be rails s
   - name: console
     root: ~/www/projects/adhoc

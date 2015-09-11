@@ -41,4 +41,6 @@ windows:
     panes:
       - be sidekiq -q default
       - red
-      - zst
+      - zeus
+        sleep 60
+        zst

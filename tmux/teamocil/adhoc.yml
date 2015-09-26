@@ -39,4 +39,6 @@ windows:
     layout: main-vertical
     panes:
       - be sidekiq -q default
-      - red; zst
+      - commands:
+        - red
+        - zst

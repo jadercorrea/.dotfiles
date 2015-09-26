@@ -198,6 +198,7 @@ function floggg(){
 
 # Zeus
   alias zst='zeus start'
+  alias zstop='rm .zeus.sock'
   alias zsts='(tmux send-keys -t 8 "zse" C-m &) && zst'
   alias zse='zeus server'
   alias zco='zeus console'

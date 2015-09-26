@@ -4,14 +4,13 @@ windows:
     layout: even-horizontal
     panes:
       - vim
-  - name: up test
+  - name: test
     root: ~/www/projects/adhoc
     layout: even-horizontal
     panes:
       - commands:
         - git up
         - be rake db:migrate RAILS_ENV=test
-        - t
   - name: server
     root: ~/www/projects/adhoc
     layout: even-horizontal
@@ -40,7 +39,4 @@ windows:
     layout: main-vertical
     panes:
       - be sidekiq -q default
-      - red
-      - zeus:
-        - sleep 60
-        - zst
+      - red; zst

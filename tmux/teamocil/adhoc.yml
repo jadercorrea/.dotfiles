@@ -8,17 +8,12 @@ windows:
     root: ~/www/projects/adhoc
     layout: even-horizontal
     panes:
-      - commands:
-        - git up
-        - be rake db:migrate RAILS_ENV=test
+      - pg
   - name: server
     root: ~/www/projects/adhoc
     layout: even-horizontal
     panes:
-      - commands:
-        - pg
-        - be rake db:migrate
-        - be rails s
+      - be rails s
   - name: console
     root: ~/www/projects/adhoc
     layout: even-horizontal
@@ -39,6 +34,4 @@ windows:
     layout: main-vertical
     panes:
       - be sidekiq -q default
-      - commands:
-        - red
-        - zst
+      - zst

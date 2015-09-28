@@ -315,6 +315,11 @@ function migrate() {
   be rake db:migrate RAILS_ENV=test
 }
 
+function rollback() {
+  be rake db:rollback
+  be rake db:rollback RAILS_ENV=test
+}
+
 function adhoc() {
   cd ~/www/projects/adhoc
   pg

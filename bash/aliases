@@ -320,6 +320,11 @@ function rollback() {
   be rake db:rollback RAILS_ENV=test
 }
 
+function remigrate() {
+  rollback
+  migrate
+}
+
 function adhoc() {
   cd ~/www/projects/adhoc
   pg

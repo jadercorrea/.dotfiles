@@ -300,8 +300,8 @@ function contribute() {
   fi
 }
 
-function internet() {
-  ping -i 1 -c 86400 8.8.8.8 | while read pong; do echo "$(date +%Y-%m-%d_%H%M%S): $pong"; done >/Users/jader/Dropbox/Logs/PingTest.log
+function ping_log() {
+  ping -i 1 -c 3600 8.8.8.8 | while read pong; do echo "$(date +%Y-%m-%d_%H%M%S): $pong"; done >/Users/jader/Dropbox/Logs/ping.log
 }
 
 function migrate() {

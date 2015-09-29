@@ -29,6 +29,7 @@ alias mtl='tmux | teamocil mtl'
 
 # System
 alias ls='ls -G'
+alias .='change_dir'
 alias ..='cd ..'
 alias ...='cd ~/'
 alias count_files='find ./ -maxdepth 1 -type d | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" | wc -l; done'
@@ -327,4 +328,8 @@ function adhoc() {
   bundle
   migrate
   tmux | teamocil adhoc
+}
+
+function change_dir() {
+  cd $*
 }

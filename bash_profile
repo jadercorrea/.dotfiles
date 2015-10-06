@@ -9,7 +9,4 @@ source $DOTFILES/bash/ssh
 source $DOTFILES/bash/dirmarks
 
 export PATH=$PATH:~/.dotfiles/bin
-DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_11_2"
-export DYLD_LIBRARY_PATH
-SQLPATH="/usr/local/oracle/instantclient_11_2"
-export SQLPATH
+export PATH=$PATH:/usr/local/oracle/instantclient_11_2

@@ -24,8 +24,10 @@ fi
 
 source ~/.dotfiles/bash/git-completion.bash
 
-# Projetcs
+# Projects
 alias mtl='tmux | teamocil mtl'
+alias integration='tmux | teamocil integration-tests'
+alias tax='tmux | teamocil tax-compliance'
 
 # System
 alias ls='ls -G'

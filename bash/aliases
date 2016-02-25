@@ -28,12 +28,13 @@ source ~/.dotfiles/bash/git-completion.bash
 alias mtl='tmux | teamocil mtl'
 alias integration='tmux | teamocil integration-tests'
 alias tax='tmux | teamocil tax-compliance'
+alias empresa='tmux | teamocil empresa'
+alias compras='tmux | teamocil compras'
 
 # System
 alias ls='ls -G'
 alias .='change_dir'
 alias ..='cd ..'
-alias ...='cd ~/'
 alias count_files='find ./ -maxdepth 1 -type d | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" | wc -l; done'
 alias ip='ipconfig getifaddr en0'
 alias x='exit'

@@ -1,0 +1,19 @@
+windows:
+  - name: vim
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/compras
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: activator
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/compras
+    layout: even-horizontal
+    panes:
+      - commands:
+        - git up
+        - activator "~ testOnly"
+  - name: server
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/compras
+    layout: even-horizontal
+    panes:
+      - commands:
+        - activator run

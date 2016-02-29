@@ -276,17 +276,36 @@ function zooppa_db_restore() {
   echo Database restore completed
 }
 
-function zooppa_up() {
-  zooppa_db_restore
-  echo Rebasing projects
-  cd ~/www/zooppa
+function compiler() {
+  echo Compiling and publishing modules locally
+  cd $*
   for i in $(ls -d */); do
-    echo updating ${i%%/} project
+    subdir=0
     cd ${i%%/}
-    git up
+    if [ ! -f build.sbt ]; then
+      subdir=1
+      cd project-code
+    fi
+    echo Compiling ${i%%/} module
+    activator compile
+    echo Puslishing ${i%%/} module
+    activator publishLocal
+    if (($subdir)); then
+      cd ..
+    fi
     cd ..
   done
-  echo Rebasing complete
+  echo Compilation complete
+}
+
+function architecture_build() {
+  compiler ~/www/ilegra/vale-taxcompliance/architecture
+}
+
+function tax-compliance_build() {
+   cd ~/www/ilegra/vale-taxcompliance/tax-compliance
+   git up
+   bash buildLocal
 }
 
 function contribute() {

@@ -10,3 +10,4 @@ source $DOTFILES/bash/dirmarks
 
 export PATH=$PATH:~/.dotfiles/bin
 export PATH=$PATH:/usr/local/oracle/instantclient_11_2
+export SBT_OPTS="-Dwebdriver.chrome.driver=/usr/local/bin/chromedriver"

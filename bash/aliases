@@ -30,6 +30,7 @@ alias integration='tmux | teamocil integration-tests'
 alias tax='tmux | teamocil tax-compliance'
 alias empresa='tmux | teamocil empresa'
 alias compras='tmux | teamocil compras'
+alias nfe='tmux | teamocil nfe'
 
 # System
 alias ls='ls -G'

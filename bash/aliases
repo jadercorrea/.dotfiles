@@ -25,12 +25,12 @@ fi
 source ~/.dotfiles/bash/git-completion.bash
 
 # Projects
-alias mtl='tmux | teamocil mtl'
-alias integration='tmux | teamocil integration-tests'
-alias tax='tmux | teamocil tax-compliance'
-alias empresa='tmux | teamocil empresa'
-alias compras='tmux | teamocil compras'
-alias nfe='tmux | teamocil nfe'
+alias mtl='tmux | tmux attach | teamocil mtl'
+alias integration='tmux | tmux attach | teamocil integration-tests'
+alias tax='tmux | tmux attach | teamocil tax-compliance'
+alias empresa='tmux | tmux attach | teamocil empresa'
+alias compras='tmux | tmux attach | teamocil compras'
+alias nfe='tmux | tmux attach | teamocil nfe'
 
 # System
 alias ls='ls -G'

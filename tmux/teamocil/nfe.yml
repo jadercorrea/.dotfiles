@@ -9,11 +9,11 @@ windows:
     layout: even-horizontal
     panes:
       - commands:
-        - git up
         - activator "~ testOnly"
   - name: server
     root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
     layout: even-horizontal
     panes:
       - commands:
+        - git up
         - activator run

@@ -356,3 +356,14 @@ function adhoc() {
 function change_dir() {
   cd $*
 }
+
+function add_pair() {
+  if (($#)); then
+    sudo dscl . -append /Users/$USER RecordName Pair pair
+    sudo sed -E -i.bak 's/^#?(PasswordAuthentication|ChallengeResponseAuthentication).*$/\1 no/' /etc/sshd_config
+    touch ~/.ssh/authorized_keys
+    gh-auth add --users $* --command="$( which tmux ) attach -t pair"
+  else
+    echo Inform a github username to add as a pair
+  fi
+}

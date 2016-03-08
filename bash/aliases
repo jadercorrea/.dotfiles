@@ -42,7 +42,7 @@ alias x='exit'
 
 # Processes
 alias tu='top -o cpu'
-alias tm='top -o cpu'
+alias tm='top -o mem'
 
 # Misc
 alias irc='/Applications/MacIrssi.app/Contents/MacOS/MacIrssi'

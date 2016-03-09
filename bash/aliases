@@ -25,12 +25,12 @@ fi
 source ~/.dotfiles/bash/git-completion.bash
 
 # Projects
-alias mtl='tmux | tmux attach | teamocil mtl'
-alias integration='tmux | tmux attach | teamocil integration-tests'
-alias tax='tmux | tmux attach | teamocil tax-compliance'
-alias empresa='tmux | tmux attach | teamocil empresa'
-alias compras='tmux | tmux attach | teamocil compras'
-alias nfe='tmux | tmux attach | teamocil nfe'
+alias mtl='session mtl'
+alias integration='session integration-tests'
+alias tax='session tax-compliance'
+alias compras='session compras'
+alias nfe='session nfe'
+alias pair='session pair'
 
 # System
 alias ls='ls -G'
@@ -365,5 +365,13 @@ function add_pair() {
     gh-auth add --users $* --command="$( which tmux ) attach -t pair"
   else
     echo Inform a github username to add as a pair
+  fi
+}
+
+function session() {
+  if (($#)); then
+    tmux new -s $* | tmux attach -t $* | teamocil $*
+  else
+    echo Inform a session configuration name
   fi
 }

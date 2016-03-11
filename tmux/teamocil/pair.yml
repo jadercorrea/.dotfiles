@@ -1,0 +1,34 @@
+windows:
+  - name: Nfe - vim
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: Nfe - activator
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
+    layout: even-horizontal
+    panes:
+      - commands:
+        - activator "~ testOnly"
+  - name: Nfe - server
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
+    layout: even-horizontal
+    panes:
+      - commands:
+        - git up
+        - activator run
+  - name: Integration Tests - vim
+    root: ~/www/ilegra/vale-taxcompliance/integration-tests
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: Sts Helper - vim
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: Navigation - vim
+    root: ~/www/ilegra/vale-taxcompliance/tax-compliance/modules/nfe
+    layout: even-horizontal
+    panes:
+      - vim

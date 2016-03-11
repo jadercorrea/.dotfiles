@@ -7,12 +7,12 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 " Vundle
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-  if filereadable(expand("~/.vimrc.bundles"))
-    source ~/.vimrc.bundles
-  endif
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 
 " Configuration
@@ -100,21 +100,21 @@ colorscheme ir_black
 let g:gitgutter_enabled = 1
 
 " zencoding plugin
- let g:user_zen_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'erb' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \}
+let g:user_zen_settings = {
+      \  'php' : {
+      \    'extends' : 'html',
+      \    'filters' : 'c',
+      \  },
+      \  'xml' : {
+      \    'extends' : 'html',
+      \  },
+      \  'erb' : {
+      \    'extends' : 'html',
+      \  },
+      \  'haml' : {
+      \    'extends' : 'html',
+      \  },
+      \}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
@@ -132,115 +132,115 @@ let g:ctrlp_user_command = 'find %s -type f'
 " section below
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  set timeoutlen=200
-  let mapleader = ","
+set timeoutlen=200
+let mapleader = ","
 
-  " save by pressing ,s instead of :w
-  map <Leader>s <ESC>:w<CR>
-  map <Leader>be :BufExplorer<CR>
+" save by pressing ,s instead of :w
+map <Leader>s <ESC>:w<CR>
+map <Leader>be :BufExplorer<CR>
 
-  nnoremap <leader>1 :set foldlevel=1<cr>
-  nnoremap <leader>2 :set foldlevel=2<cr>
-  nnoremap <leader>3 :set foldlevel=3<cr>
-  nnoremap <leader>4 :set foldlevel=4<cr>
-  nnoremap <leader>9 :set foldlevel=9<cr>
+nnoremap <leader>1 :set foldlevel=1<cr>
+nnoremap <leader>2 :set foldlevel=2<cr>
+nnoremap <leader>3 :set foldlevel=3<cr>
+nnoremap <leader>4 :set foldlevel=4<cr>
+nnoremap <leader>9 :set foldlevel=9<cr>
 
-  " Tab mappings.
-    map <leader>tt :tabnew<cr>
-    map <leader>te :tabedit
-    map <leader>tc :tabclose<cr>
-    map <leader>to :tabonly<cr>
-    map <leader>tn :tabnext<cr>
-    map <leader>tp :tabprevious<cr>
-    map <leader>tf :tabfirst<cr>
-    map <leader>tl :tablast<cr>
-    map <leader>tm :tabmove
+" Tab mappings.
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tm :tabmove
 
-  " Enter clears search highlight
-  nmap <CR> :nohlsearch<CR>
+" Enter clears search highlight
+nmap <CR> :nohlsearch<CR>
 
-  " When pasting in visual mode, doesn't replace current register
-  " vnoremap p "_dP
-  " I haven't found how to hide this function (yet)
-  function! RestoreRegister()
-    let @" = s:restore_reg
-    return ''
-  endfunction
+" When pasting in visual mode, doesn't replace current register
+" vnoremap p "_dP
+" I haven't found how to hide this function (yet)
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
 
-  function! s:Repl()
-      let s:restore_reg = @"
-      return "p@=RestoreRegister()\<cr>"
-  endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
 
-  " this supports "rp that replaces the selection by the contents of @r
-  vnoremap <silent> <expr> p <sid>Repl()
+" this supports "rp that replaces the selection by the contents of @r
+vnoremap <silent> <expr> p <sid>Repl()
 
 
-  " Goes to the end of the line (pressing shift+4 is annoying)
-  nmap 44 $
-  vmap 44 $h
+" Goes to the end of the line (pressing shift+4 is annoying)
+nmap 44 $
+vmap 44 $h
 
-  function! SearchCurrentPath()
-    let l:word = expand("<cword>")
-    call feedkeys(":CtrlP\<CR>".l:word, "t")
-  endfunction
-  nnoremap <leader>g :call SearchCurrentPath()<cr>
+function! SearchCurrentPath()
+  let l:word = expand("<cword>")
+  call feedkeys(":CtrlP\<CR>".l:word, "t")
+endfunction
+nnoremap <leader>g :call SearchCurrentPath()<cr>
 
-  " Tab becomes Esc
-  " inoremap <Tab> <Esc>
+" Tab becomes Esc
+" inoremap <Tab> <Esc>
 
-  " Updates CTags
-  map <F5> :exec "!ctags -R --exclude=.git --exclude=vendor/bundle"<CR>
+" Updates CTags
+map <F5> :exec "!ctags -R --exclude=.git --exclude=vendor/bundle"<CR>
 
-  nmap <leader>b :so $MYVIMRC<CR>
+nmap <leader>b :so $MYVIMRC<CR>
 
-  " Resizing windows
-  nnoremap <C-h> :vertical resize +5<cr>
-  nnoremap <C-l> :vertical resize -5<cr>
-  nnoremap <C-k> :resize +5<cr>
-  nnoremap <C-j> :resize -5<cr>
+" Resizing windows
+nnoremap <C-h> :vertical resize +5<cr>
+nnoremap <C-l> :vertical resize -5<cr>
+nnoremap <C-k> :resize +5<cr>
+nnoremap <C-j> :resize -5<cr>
 
-  inoremap  <Up>     <NOP>
-  inoremap  <Down>   <NOP>
-  inoremap  <Left>   <NOP>
-  inoremap  <Right>  <NOP>
-  noremap   <Up>     <NOP>
-  noremap   <Down>   <NOP>
-  noremap   <Left>   <NOP>
-  noremap   <Right>  <NOP>
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
-  " When you've writen : (colon), press %% very fast and it'll write the current
-  " file's directory
-  cnoremap %% <C-R>=expand('%:h').'/'<cr>
-  map <leader>e :edit %%
-  map <leader>v :view %%
+" When you've writen : (colon), press %% very fast and it'll write the current
+" file's directory
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
 
-  " RUBY & RAILS
-    " Keeps current file in on side, and its test file in the other
-    " (depends on Rails.vim)
-    map <leader>A :on<CR>\|:vsplit<CR>\|<c-w>l\|:A<CR>
+" RUBY & RAILS
+" Keeps current file in on side, and its test file in the other
+" (depends on Rails.vim)
+map <leader>A :on<CR>\|:vsplit<CR>\|<c-w>l\|:A<CR>
 
-    " adds <%= %> in the current line
-    inoremap <leader>p <%=  %><ESC>==lllli
-    nnoremap <leader>p <%=  %><ESC>==lllli
+" adds <%= %> in the current line
+inoremap <leader>p <%=  %><ESC>==lllli
+nnoremap <leader>p <%=  %><ESC>==lllli
 
-    " :A is from rails.vim plugin
-    nnoremap <Leader>a :A<CR>
+" :A is from rails.vim plugin
+nnoremap <Leader>a :A<CR>
 
-    " deletes the remaining chars from a string
-    nnoremap <Leader>ds vf"hd
+" deletes the remaining chars from a string
+nnoremap <Leader>ds vf"hd
 
-  " CTRLP
-    map <leader>ga :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
-    map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
-    map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
-    map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
-    map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
-    map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
-    map <leader>gu :CtrlPClearCache<cr>\|:CtrlP spec/unit<cr>
-    map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
-    map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
-    map <leader>F :CtrlPClearCache<cr>\|:CtrlP %%<cr>
+" CTRLP
+map <leader>ga :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
+map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
+map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
+map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
+map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
+map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
+map <leader>gu :CtrlPClearCache<cr>\|:CtrlP spec/unit<cr>
+map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
+map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
+map <leader>F :CtrlPClearCache<cr>\|:CtrlP %%<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -259,60 +259,60 @@ command! CtrlPVimPath call SetCtrlPPathTheSameAsVim()
 " CUSTOM FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  " Rename current file
-  function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('Renaming file. New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-      exec ':saveas ' . new_name
-      exec ':silent !rm ' . old_name
-      redraw!
-    endif
-  endfunction
+" Rename current file
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('Renaming file. New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
 
-  " Copy current file to a new location
-  function! CopyFile()
-    let old_name = expand('%')
-    let new_name = input('Copying file. New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-      exec ':saveas ' . new_name
-      redraw!
-    endif
-  endfunction
+" Copy current file to a new location
+function! CopyFile()
+  let old_name = expand('%')
+  let new_name = input('Copying file. New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    redraw!
+  endif
+endfunction
 
-  map <leader>n :call RenameFile()<cr>
-  map <leader>c :call CopyFile()<cr>
+map <leader>n :call RenameFile()<cr>
+map <leader>c :call CopyFile()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TESTS & SPECS FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  noremap <cr> <ESC>:w<ESC>\|:call RunTestFile()<cr>
-  map <leader>t :call RunTestFile()<cr>
-  map <leader>r :RuboCop<cr>
-  map <leader>bt <ESC>:w<CR>\|:!bundle exec rspec --color --no-drb %<cr>
+noremap <cr> <ESC>:w<ESC>\|:call RunTestFile()<cr>
+map <leader>t :call RunTestFile()<cr>
+map <leader>r :RuboCop<cr>
+map <leader>bt <ESC>:w<CR>\|:!bundle exec rspec --color --no-drb %<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ENVIRONMENT CONFIGURATIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  " taken from http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-  highlight RedundantSpaces ctermbg=red guibg=red
-  match RedundantSpaces /\s\+$/
-  autocmd BufWinEnter * match RedundantSpaces /\s\+$/
-  autocmd InsertEnter * match RedundantSpaces /\s\+\%#\@<!$/
-  autocmd InsertLeave * match RedundantSpaces /\s\+$/
-  autocmd BufWinLeave * call clearmatches()
+" taken from http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight RedundantSpaces ctermbg=red guibg=red
+match RedundantSpaces /\s\+$/
+autocmd BufWinEnter * match RedundantSpaces /\s\+$/
+autocmd InsertEnter * match RedundantSpaces /\s\+\%#\@<!$/
+autocmd InsertLeave * match RedundantSpaces /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>

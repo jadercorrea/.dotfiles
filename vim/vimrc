@@ -242,6 +242,9 @@ map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 map <leader>F :CtrlPClearCache<cr>\|:CtrlP %%<cr>
 
+" Dash
+map <leader>d :Dash<cr>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM COMMANDS

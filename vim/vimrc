@@ -121,7 +121,7 @@ let g:user_zen_settings = {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|.DS_STORE'
+let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|.DS_STORE\|build\|target\|node_modules'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = 'find %s -type f'
 
@@ -138,6 +138,9 @@ let mapleader = ","
 " save by pressing ,s instead of :w
 map <Leader>s <ESC>:w<CR>
 map <Leader>be :BufExplorer<CR>
+
+" copy by pressing ctrl+c
+vnoremap <C-c> "*y
 
 nnoremap <leader>1 :set foldlevel=1<cr>
 nnoremap <leader>2 :set foldlevel=2<cr>

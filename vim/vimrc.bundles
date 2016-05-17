@@ -42,8 +42,8 @@ Plugin 'jadercorrea/smartest.vim' " Run tests for ruby, JS, Elixir and Scala
 Plugin 'asux/vim-capybara.git' " Snippets for cabybara
 Plugin 'ngmy/vim-rubocop.git' " Runs rubocop for the current file
 Plugin 'rizzatti/dash.vim' " Search Dash.app from Vim
-Plugin 'unblevable/quick-scope' " highlights which characters to target for f
 Plugin 'elzr/vim-json' " Highlights keywords and values
 Plugin 'tonchis/to-github-vim' " Opens current file on github
 Plugin 'powerman/vim-plugin-AnsiEsc' " ansi escape sequences concealed
 Plugin 'slashmili/alchemist.vim' " Elixir autocomplete
+Plugin 'wakatime/vim-wakatime'

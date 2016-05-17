@@ -84,6 +84,8 @@ alias gb='git branch'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log'
+alias gl='git log'
+alias gl="git log --pretty=format:'%C(yellow)%h %C(blue)<<%an>> %C(black)%ad%C(yellow)%d%Creset %s %Creset' --date=short --abbrev-commit | sed -e 's/<<\([A-Za-z]\).* \([A-Za-z]\).*>>/<\1\2>/' | sed ''/Merge/s//`printf "\033[31mMerge\033[0m"`/'' | sed ''/Revert/s//`printf "\033[31mRevert\033[0m"`/'' | less -rX"
 alias gdm='git diff master'
 
 	# Commit pending changes and quote all args as message

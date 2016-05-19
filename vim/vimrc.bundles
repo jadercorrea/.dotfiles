@@ -17,7 +17,8 @@ Plugin 'scrooloose/syntastic.git' " Syntax checking
 Plugin 'altercation/vim-colors-solarized.git' "Precision colors
 Plugin 'greyblake/vim-preview.git' " Preview for markup files
 Plugin 'tpope/vim-rake.git' " Vim-rails for pure ruby scripts
-Plugin 'garbas/vim-snipmate.git' " Implements some of TextMate's snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets.git' " Snippets for vim
 Plugin 'tpope/vim-vividchalk.git' " Vibrant Ink colorscheme
 Plugin 'rking/ag.vim' " The silver searcher inside vim

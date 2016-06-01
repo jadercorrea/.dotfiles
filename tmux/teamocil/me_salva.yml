@@ -1,0 +1,43 @@
+windows:
+  - name: vim
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - vim
+  - name: test
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - pg
+  - name: server
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - be rails s
+  - name: console
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - rails c
+  - name: security
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - brakeman -q
+  - name: metrics
+    root: ~/www/me_salva/backend-api
+    layout: even-horizontal
+    panes:
+      - rubocop
+      - reek
+  - name: jobs
+    root: ~/www/me_salva/backend-api
+    layout: main-vertical
+    panes:
+      - be sidekiq -q default
+      - zst
+  - name: front
+    root: ~/www/me_salva/front
+    layout: main-vertical
+    panes:
+      - grunt dev --live

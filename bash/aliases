@@ -376,3 +376,15 @@ function session() {
     echo Inform a session configuration name
   fi
 }
+
+function me-salva() {
+  cd ~/www/me_salva/front
+  git up
+  cd ~/www/me_salva/backend-api
+  pg
+  red
+  git up
+  bundle
+  migrate
+  session me_salva
+}

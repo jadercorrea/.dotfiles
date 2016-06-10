@@ -31,6 +31,7 @@ alias tax='session tax-compliance'
 alias compras='session compras'
 alias nfe='session nfe'
 alias pair='session pair'
+alias qa-psql='heroku pg:psql --app mesalva-backend-api-qa HEROKU_POSTGRESQL_COBALT'
 
 # System
 alias ls='ls -G'

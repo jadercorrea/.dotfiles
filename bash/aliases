@@ -26,12 +26,12 @@ source ~/.dotfiles/bash/git-completion.bash
 
 # Projects
 alias mtl='session mtl'
-alias integration='session integration-tests'
 alias tax='session tax-compliance'
 alias compras='session compras'
 alias nfe='session nfe'
 alias pair='session pair'
 alias qa-psql='heroku pg:psql --app mesalva-backend-api-qa HEROKU_POSTGRESQL_COBALT'
+alias integration='sh bin/integration'
 
 # System
 alias ls='ls -G'

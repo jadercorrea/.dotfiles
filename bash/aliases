@@ -41,6 +41,7 @@ alias count_files='find ./ -maxdepth 1 -type d | while read -r dir; do printf "%
 alias ip='ipconfig getifaddr en0'
 alias x='exit'
 alias ll='ls -la'
+alias ds_store='sudo find / -name ".DS_Store" -depth -exec rm {} \;'
 
 # Processes
 alias tu='top -o cpu'

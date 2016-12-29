@@ -60,6 +60,7 @@ alias mdb='sudo mongod --fork --logpath /var/log/mongod.log'
 alias mys='mysql.server start'
 #Redis
 alias red='redis-server &'
+alias red-clear='redis-cli config set save ""'
 
 # cURL
 alias api-get="curl -i -H 'Content-Type: application/json' "

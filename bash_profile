@@ -4,6 +4,7 @@ source $DOTFILES/bash/config
 source $DOTFILES/bash/env
 source $DOTFILES/bash/aliases
 source $DOTFILES/bash/ssh
+HISTFILESIZE=10000000
 
 # This is neat
 source $DOTFILES/bash/dirmarks

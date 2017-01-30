@@ -34,10 +34,9 @@ windows:
     root: ~/www/me_salva/backend-api
     layout: main-vertical
     panes:
-      - be sidekiq -q default
-      - be clockwork clock.rb
-      - zst
       - elasticsearch
+      - zst
+      - memcached
   - name: front
     root: ~/www/me_salva/front
     layout: main-vertical

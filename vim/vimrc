@@ -1,7 +1,8 @@
 " Copy or symlink this file to ~/.vimrc
 
 set nocompatible               " be iMproved
-filetype off                   " required!
+"filetype off                   " required!
+filetype plugin on
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -78,6 +79,7 @@ au BufRead,BufNewFile *.ejs set filetype=html
 
 hi CursorLineNR cterm=bold
 augroup CLNRSet
+  autocmd! BufNewFile,BufRead *.js hi JSContextColor
   autocmd! ColorScheme * hi CursorLineNR cterm=bold ctermfg=green
 augroup END
 

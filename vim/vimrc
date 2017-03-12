@@ -126,6 +126,10 @@ let g:ctrlp_user_command = 'find %s -type f'
 " Vim-to-github
 map <leader>tg <ESC>:ToGithub<CR>
 
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM SHORTCUTS & KEY BINDINGS
 "

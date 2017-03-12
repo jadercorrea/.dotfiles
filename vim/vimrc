@@ -1,12 +1,11 @@
 " Copy or symlink this file to ~/.vimrc
 
 set nocompatible               " be iMproved
-"filetype off                   " required!
-filetype plugin on
+filetype off                   " required!
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -328,4 +327,5 @@ inoremap <s-tab> <c-n>
 "highlight ColorColumn ctermbg=7
 set colorcolumn=80
 
-execute pathogen#infect()
+call vundle#end()
+filetype plugin indent on

@@ -27,7 +27,7 @@ Plugin 'tpope/vim-rails.git' " Rails toolbox for vim
 Plugin 'vim-ruby/vim-ruby.git' " Ruby config for vim
 Plugin 'elixir-lang/vim-elixir' " Elixir syntax highlight
 Plugin 'wting/rust.vim' " Rust syntax highlight
-Plugin 'pangloss/vim-javascript.git' " JS syntax
+"Plugin 'pangloss/vim-javascript.git' " JS syntax
 Plugin 'itspriddle/vim-jquery.git' " Syntax highlighting for jquery
 Plugin 'derekwyatt/vim-scala.git' " Scala integration for vim
 Plugin 'tpope/vim-markdown.git' " Markdown runtime
@@ -39,7 +39,7 @@ Plugin 'kurko/autocoder.vim' " Ruby code generator
 Plugin 'jadercorrea/elixir_generator.vim' " Elixir code generator
 Plugin 'tpope/vim-endwise.git' " End structures automatically on ruby
 Plugin 'mattn/emmet-vim.git' " Generates html blocks
-Plugin 'jadercorrea/smartest.vim' " Run tests for ruby, JS, Elixir and Scala
+"Plugin 'jadercorrea/smartest.vim' " Run tests for ruby, JS, Elixir and Scala
 Plugin 'asux/vim-capybara.git' " Snippets for cabybara
 Plugin 'ngmy/vim-rubocop.git' " Runs rubocop for the current file
 Plugin 'rizzatti/dash.vim' " Search Dash.app from Vim
@@ -49,3 +49,5 @@ Plugin 'powerman/vim-plugin-AnsiEsc' " ansi escape sequences concealed
 Plugin 'slashmili/alchemist.vim' " Elixir autocomplete
 Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'scrooloose/nerdtree'
+Plugin 'othree/yajs.vim'
+Plugin 'janko-m/vim-test'

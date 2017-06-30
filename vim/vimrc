@@ -77,10 +77,6 @@ au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.ejs set filetype=html
 
 hi CursorLineNR cterm=bold
-augroup CLNRSet
-  autocmd! BufNewFile,BufRead *.js hi JSContextColor
-  autocmd! ColorScheme * hi CursorLineNR cterm=bold ctermfg=green
-augroup END
 
 " "Theme
 colorscheme ir_black
@@ -305,8 +301,8 @@ map <leader>c :call CopyFile()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TESTS & SPECS FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <cr> <ESC>:w<ESC>\|:call RunTestFile()<cr>
-map <leader>t :call RunTestFile()<cr>
+noremap <cr> <ESC>:w<ESC>\|:TestNearest<cr>
+map <leader>t :TestNearest<cr>
 map <leader>r :RuboCop<cr>
 map <leader>bt <ESC>:w<CR>\|:!bundle exec rspec --color --no-drb %<cr>
 

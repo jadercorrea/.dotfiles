@@ -27,7 +27,7 @@ Plugin 'tpope/vim-rails.git' " Rails toolbox for vim
 Plugin 'vim-ruby/vim-ruby.git' " Ruby config for vim
 Plugin 'elixir-lang/vim-elixir' " Elixir syntax highlight
 Plugin 'wting/rust.vim' " Rust syntax highlight
-"Plugin 'pangloss/vim-javascript.git' " JS syntax
+Plugin 'pangloss/vim-javascript.git' " JS syntax
 Plugin 'itspriddle/vim-jquery.git' " Syntax highlighting for jquery
 Plugin 'derekwyatt/vim-scala.git' " Scala integration for vim
 Plugin 'tpope/vim-markdown.git' " Markdown runtime
@@ -49,5 +49,5 @@ Plugin 'powerman/vim-plugin-AnsiEsc' " ansi escape sequences concealed
 Plugin 'slashmili/alchemist.vim' " Elixir autocomplete
 Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'scrooloose/nerdtree'
-Plugin 'othree/yajs.vim'
+Plugin 'mxw/vim-jsx'
 Plugin 'janko-m/vim-test'

@@ -117,9 +117,8 @@ let g:user_zen_settings = {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|.DS_STORE\|build\|target\|node_modules'
+let g:ctrlp_custom_ignore = 'tmp$\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/vcr\|public/uploads\|public/themes/cloud\|spec/cassett\|\.git\|cassett\|/.git\|coverage\|.DS_STORE\|node_modules\|expo'
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = 'find %s -type f'
 
 " Vim-to-github
 map <leader>tg <ESC>:ToGithub<CR>

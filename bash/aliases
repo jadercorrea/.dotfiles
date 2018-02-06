@@ -42,6 +42,7 @@ alias ip='ipconfig getifaddr en0'
 alias x='exit'
 alias ll='ls -la'
 alias ds_store='sudo find / -name ".DS_Store" -depth -exec rm {} \;'
+alias envs='cat .env | sed -e "s/^/export /" | tee -a envs.sh && source envs.sh'
 
 # Processes
 alias tu='top -o cpu'
@@ -242,7 +243,7 @@ alias sub='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # General commands
 function grepp(){
-  grep -Rni --exclude=".//db/data*" --exclude=".//tmp*" --exclude=".//vendor*" --exclude=".//coverage*" --exclude=".//log*" --exclude=".//tag*" --exclude=".//spec*/vcr*" --exclude=".//spec*/cassett*" --exclude=".//public/*.js*" --exclude=".//.*" --exclude="./db/data*" --exclude="./tmp*" --exclude="./vendor*" --exclude="./coverage*" --exclude="./log*" --exclude="./tag*" --exclude="./spec*/cassett*" --exclude="./public/*.js*" --exclude="./.*" "$*" ./
+  grep -Rni --exclude=".//node_modules*" --exclude=".//db/data*" --exclude=".//tmp*" --exclude=".//vendor*" --exclude=".//coverage*" --exclude=".//log*" --exclude=".//tag*" --exclude=".//spec*/vcr*" --exclude=".//spec*/cassett*" --exclude=".//public/*.js*" --exclude=".//.*" --exclude="./db/data*" --exclude="./tmp*" --exclude="./vendor*" --exclude="./coverage*" --exclude="./log*" --exclude="./tag*" --exclude="./spec*/cassett*" --exclude="./public/*.js*" --exclude="./.*" "$*" ./
 }
 
 function findd(){

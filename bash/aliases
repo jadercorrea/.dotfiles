@@ -183,6 +183,20 @@ function spc(){ echo 'Running all tests in spec/controllers/' && time bundle exe
 function spm(){ echo 'Running all tests in spec/models/' && time bundle exec rspec spec/models/ $*; }
 function spl(){ echo 'Running all tests in spec/lib/' && time bundle exec rspec spec/lib/ $*; }
 
+function spec-diff() {
+  bundle exec rspec $(git ls-files -m | xargs ls -1 2>/dev/null | grep 'spec\.rb$')
+}
+
+function diff-cop() {
+  cops=(rubocop reek)
+  for i in "${cops[@]}"
+  do
+    echo ""
+    echo Running ${i%%} verification
+    git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs "$i"
+  done
+}
+
 function t(){
   SPEC_PATH='spec/'
   if [ ! -z "$*" ]; then
@@ -392,13 +406,4 @@ function me-salva() {
   bundle
   migrate
   session me_salva
-}
-function diff-cop() {
-  cops=(rubocop reek)
-  for i in "${cops[@]}"
-  do
-    echo ""
-    echo Running ${i%%} verification
-    git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs "$i"
-  done
 }

@@ -393,3 +393,12 @@ function me-salva() {
   migrate
   session me_salva
 }
+function diff-cop() {
+  cops=(rubocop reek)
+  for i in "${cops[@]}"
+  do
+    echo ""
+    echo Running ${i%%} verification
+    git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs "$i"
+  done
+}

@@ -345,7 +345,7 @@ function contribute() {
 }
 
 function ping_log() {
-  ping -i 1 -c 3600 8.8.8.8 | while read pong; do echo "$(date +%Y-%m-%d_%H%M%S): $pong"; done >/Users/jader/Dropbox/Logs/ping.log
+  ping -i 1 -c 3600 8.8.8.8 | while read pong; do echo "$(date +%Y-%m-%d_%H%M%S): $pong"; done >/Users/jadercorrea/Documents/logs/ping.log
 }
 
 function migrate() {

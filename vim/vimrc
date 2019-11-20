@@ -11,12 +11,15 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+call vundle#config#activate_bundles()
+
+filetype plugin indent on
 
 " Configuration
 set tags=tags                     " ctags
 
 syntax on                         " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
+colorscheme ir_black
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -81,15 +84,8 @@ set foldmethod=indent
 set fillchars=fold:\
 set foldlevelstart=99
 set foldlevel=99
-au BufRead,BufNewFile *.scss set filetype=scss
-au BufRead,BufNewFile *.ejs set filetype=html
 
 hi CursorLineNR cterm=bold
-
-" "Theme
-colorscheme ir_black
-"railscasts
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DEFAULT BEHAVIORS
@@ -332,6 +328,7 @@ endfunction
 
 map <leader>n :call RenameFile()<cr>
 map <leader>c :call CopyFile()<cr>
+map <leader>m :MixFormat<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TESTS & SPECS FUNCTIONS

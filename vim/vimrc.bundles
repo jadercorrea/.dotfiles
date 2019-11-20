@@ -1,53 +1,57 @@
-Plugin 'gmarik/vundle' " Plugin manager
+" Plugins
+Plugin 'VundleVim/Vundle.vim' " Plugin manager
 Plugin 'tpope/vim-pathogen' " Plugin instalation
-Plugin 'vim-scripts/EasyGrep' " Search and replace operations through multiple files
+" Navigation & Search
+Plugin 'vim-scripts/EasyGrep' " Search and replace through multiple files
 Plugin 'bkad/CamelCaseMotion' " Navigation
 Plugin 'vim-scripts/taglist.vim' " CTags
-Plugin 'airblade/vim-gitgutter' " Shows a git diff
 Plugin 'ctrlpvim/ctrlp.vim.git' " File navigation
-Plugin 'tpope/vim-fugitive.git' " Git wrapper
 Plugin 'sjl/gundo.vim.git' " Undo tree
-Plugin 'mustache/vim-mustache-handlebars' " Mustache generator
-Plugin 'digitaltoad/vim-jade.git' " Syntax highlighting for Pug
-Plugin 'tpope/vim-ragtag.git' " Mappings for ruby code inside html
-Plugin 'ciaranm/securemodelines.git' " Alternative to Vim modelines
-Plugin 'ervandew/supertab.git' " Completion
-Plugin 'tpope/vim-surround.git' " Quotes substitution
-Plugin 'scrooloose/syntastic.git' " Syntax checking
-Plugin 'altercation/vim-colors-solarized.git' "Precision colors
-Plugin 'greyblake/vim-preview.git' " Preview for markup files
-Plugin 'tpope/vim-rake.git' " Vim-rails for pure ruby scripts
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets.git' " Snippets for vim
-Plugin 'tpope/vim-vividchalk.git' " Vibrant Ink colorscheme
 Plugin 'rking/ag.vim' " The silver searcher inside vim
-Plugin 'editorconfig/editorconfig-vim' " Enforces indentation
+Plugin 'scrooloose/nerdtree'
+" Git
+Plugin 'tpope/vim-fugitive.git' " Git wrapper
+Plugin 'airblade/vim-gitgutter' " Shows a git diff
+" Elixir & Phoenix
+Plugin 'elixir-editors/vim-elixir' " Elixir syntax highlight
+Plugin 'mhinz/vim-mix-format'
+Plugin 'jadercorrea/elixir_generator.vim' " Elixir code generator
+Plugin 'slashmili/alchemist.vim' " Elixir autocomplete
+" Ruby & Rails
 Plugin 'tpope/vim-rails.git' " Rails toolbox for vim
 Plugin 'vim-ruby/vim-ruby.git' " Ruby config for vim
-Plugin 'elixir-lang/vim-elixir' " Elixir syntax highlight
-Plugin 'wting/rust.vim' " Rust syntax highlight
+Plugin 'tpope/vim-rake.git' " Vim-rails for pure ruby scripts
+Plugin 'tpope/vim-ragtag.git' " Mappings for ruby code inside html
+Plugin 'tpope/vim-haml.git' " Runtime files for Haml, Sass, and SCSS
+Plugin 'tpope/vim-endwise.git' " End structures automatically on ruby
+Plugin 'ngmy/vim-rubocop.git' " Runs rubocop for the current file
+Plugin 'kurko/autocoder.vim' " Ruby code generator
+" HTML, CSS & JS
 Plugin 'pangloss/vim-javascript.git' " JS syntax
 Plugin 'itspriddle/vim-jquery.git' " Syntax highlighting for jquery
-Plugin 'derekwyatt/vim-scala.git' " Scala integration for vim
-Plugin 'tpope/vim-markdown.git' " Markdown runtime
 Plugin 'othree/html5.vim.git' " Html5 systax and auto complete
-Plugin 'tpope/vim-haml.git' " Runtime files for Haml, Sass, and SCSS
 Plugin 'kchmck/vim-coffee-script.git' " Coffeescritp support
 Plugin 'cakebaker/scss-syntax.vim.git' " Syntax for css
-Plugin 'kurko/autocoder.vim' " Ruby code generator
-Plugin 'jadercorrea/elixir_generator.vim' " Elixir code generator
-Plugin 'tpope/vim-endwise.git' " End structures automatically on ruby
+Plugin 'mxw/vim-jsx'
+Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'mattn/emmet-vim.git' " Generates html blocks
+" Syntax highlight & Colorschemes
+Plugin 'scrooloose/syntastic.git' " Syntax checking
+Plugin 'altercation/vim-colors-solarized.git' "Precision colors
+Plugin 'editorconfig/editorconfig-vim' " Enforces indentation
+Plugin 'elzr/vim-json' " Highlights keywords and values
+" Rust
+Plugin 'wting/rust.vim' " Rust syntax highlight
+" Testing
 "Plugin 'jadercorrea/smartest.vim' " Run tests for ruby, JS, Elixir and Scala
 Plugin 'asux/vim-capybara.git' " Snippets for cabybara
-Plugin 'ngmy/vim-rubocop.git' " Runs rubocop for the current file
-Plugin 'rizzatti/dash.vim' " Search Dash.app from Vim
-Plugin 'elzr/vim-json' " Highlights keywords and values
-Plugin 'tonchis/to-github-vim' " Opens current file on github
-Plugin 'powerman/vim-plugin-AnsiEsc' " ansi escape sequences concealed
-Plugin 'slashmili/alchemist.vim' " Elixir autocomplete
-Plugin 'bigfish/vim-js-context-coloring'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mxw/vim-jsx'
 Plugin 'janko-m/vim-test'
+" Utils
+Plugin 'tonchis/to-github-vim' " Opens current file on github
+Plugin 'tpope/vim-surround.git' " Quotes substitution
+Plugin 'mustache/vim-mustache-handlebars' " Mustache generator
+Plugin 'ervandew/supertab.git' " Completion
+Plugin 'greyblake/vim-preview.git' " Preview for markup files
+Plugin 'honza/vim-snippets.git' " Snippets for vim
+Plugin 'tpope/vim-markdown.git' " Markdown runtime
+Plugin 'rizzatti/dash.vim' " Search Dash.app from Vim

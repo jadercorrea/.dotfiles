@@ -188,7 +188,7 @@ function spec-diff() {
 }
 
 function diff-cop() {
-  cops=(rubocop reek)
+  cops=(rubocop)
   for i in "${cops[@]}"
   do
     echo ""

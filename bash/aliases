@@ -24,15 +24,6 @@ fi
 
 source ~/.dotfiles/bash/git-completion.bash
 
-# Projects
-alias mtl='session mtl'
-alias tax='session tax-compliance'
-alias compras='session compras'
-alias nfe='session nfe'
-alias pair='session pair'
-alias qa-psql='heroku pg:psql --app mesalva-backend-api-qa HEROKU_POSTGRESQL_COBALT'
-alias integration='sh bin/integration'
-
 # System
 alias ls='ls -G'
 alias .='change_dir'
@@ -68,6 +59,9 @@ alias api-get="curl -i -H 'Content-Type: application/json' "
 alias api-post="curl -i -H 'Content-Type: application/json' -X POST -d "
 alias api-put="curl -i -H 'Content-Type: application/json' -X PUT -d "
 alias api-delete="curl -i -H 'Content-Type: application/json' -X DELETE "
+
+# Elixir
+alias repry='fc -s mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 
 # Rails helpers
 #
@@ -257,7 +251,7 @@ alias sub='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # General commands
 function grepp(){
-  grep -Rni --exclude=".//node_modules*" --exclude=".//db/data*" --exclude=".//tmp*" --exclude=".//vendor*" --exclude=".//coverage*" --exclude=".//log*" --exclude=".//tag*" --exclude=".//spec*/vcr*" --exclude=".//spec*/cassett*" --exclude=".//public/*.js*" --exclude=".//.*" --exclude="./db/data*" --exclude="./tmp*" --exclude="./vendor*" --exclude="./coverage*" --exclude="./log*" --exclude="./tag*" --exclude="./spec*/cassett*" --exclude="./public/*.js*" --exclude="./.*" "$*" ./
+  grep -Rni --exclude=".//_build*" --exclude=".//erl_crash.dump*" --exclude=".//deps*" --exclude=".//node_modules*" --exclude=".//db/data*" --exclude=".//tmp*" --exclude=".//vendor*" --exclude=".//coverage*" --exclude=".//log*" --exclude=".//tag*" --exclude=".//spec*/vcr*" --exclude=".//spec*/cassett*" --exclude=".//public/*.js*" --exclude=".//.*" --exclude="./db/data*" --exclude="./tmp*" --exclude="./vendor*" --exclude="./coverage*" --exclude="./log*" --exclude="./tag*" --exclude="./spec*/cassett*" --exclude="./public/*.js*" --exclude="./.*" "$*" ./
 }
 
 function findd(){

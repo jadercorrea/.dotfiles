@@ -329,6 +329,8 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 map <leader>c :call CopyFile()<cr>
 map <leader>m :MixFormat<cr>
+map <leader>b <ESC>:w<CR>\|:!mix run %<cr>
+map <leader>x orequire IEx; IEx.pry<esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TESTS & SPECS FUNCTIONS

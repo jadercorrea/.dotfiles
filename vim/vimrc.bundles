@@ -55,3 +55,4 @@ Plugin 'greyblake/vim-preview.git' " Preview for markup files
 Plugin 'honza/vim-snippets.git' " Snippets for vim
 Plugin 'tpope/vim-markdown.git' " Markdown runtime
 Plugin 'rizzatti/dash.vim' " Search Dash.app from Vim
+Plugin 'wakatime/vim-wakatime' " Time tracker

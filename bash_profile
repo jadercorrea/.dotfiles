@@ -10,6 +10,7 @@ source $DOTFILES/bash/dirmarks
 HISTFILESIZE=10000000
 
 export PATH=$PATH:~/.dotfiles/bin
+export PATH="$HOME/.usr/local/bin/hub:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
